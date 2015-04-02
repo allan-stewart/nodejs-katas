@@ -1,0 +1,19 @@
+{
+  "name": "luhn-kata-functional",
+  "version": "1.0.0",
+  "description": "A luhn algorithm kata using functional-style programming.",
+  "main": "luhn.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^2.1.0",
+    "should": "^5.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Allan Stewart",
+  "license": "MIT"
+}
