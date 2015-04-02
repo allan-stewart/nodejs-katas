@@ -1,2 +1,2 @@
 # nodejs-katas
-Code 
+Code katas in [Node.js](https://nodejs.org/)
