@@ -1,0 +1,17 @@
+{
+  "name": "kata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "istanbul": "^0.3.5",
+    "mocha": "^2.1.0"
+  },
+  "scripts": {
+    "test": "istanbul cover node_modules/mocha/bin/_mocha",
+	"start": "mocha -w"
+  },
+  "author": "",
+  "license": "ISC"
+}
