@@ -1,0 +1,15 @@
+{
+  "name": "typescript-tdd",
+  "version": "1.0.0",
+  "description": "An experiment of typescript and mocha.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -w",
+    "test": "mocha build/test/**/*.js --watch"
+  },
+  "author": "Allan Stewart",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^1.8.10"
+  }
+}
