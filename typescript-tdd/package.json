@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "typescript": "^1.8.10"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
   }
 }
