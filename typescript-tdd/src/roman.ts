@@ -6,17 +6,17 @@ export default class Roman {
     return numerals.reduce((prev, current) : string => {
       var count = Math.floor(input / current.value) + 1;
       input = input % current.value;
-      return prev + new Array(count).join(current.numeral);
+      return prev + new Array(count).join(current.symbol);
     }, '');
   }
 }
 
 class Numeral {
-  numeral : string;
+  symbol : string;
   value : number;
 
-  constructor(numeral: string, value: number) {
-    this.numeral = numeral;
+  constructor(symbol: string, value: number) {
+    this.symbol = symbol;
     this.value = value;
   }
 }
