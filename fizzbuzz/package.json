@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-katas",
+  "version": "1.0.0",
+  "description": "Katas",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allan-stewart/nodejs-katas.git"
+  },
+  "author": "Allan Stewart",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allan-stewart/nodejs-katas/issues"
+  },
+  "homepage": "https://github.com/allan-stewart/nodejs-katas#readme",
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
