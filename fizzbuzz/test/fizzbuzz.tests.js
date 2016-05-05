@@ -57,4 +57,17 @@ describe('fizzbuzz', () => {
       test(i);
     }
   });
+
+  describe('mapReduce', () => {
+    var test = (input) => {
+      var expected = fizzbuzz(input);
+      it(`matches the basic output of ${expected} for ${input}`, () => {
+        assert.equal(fizzbuzz(input, 'mapReduce'), expected);
+      });
+    };
+
+    for (var i = 1; i <= 21; i++) {
+      test(i);
+    }
+  });
 });

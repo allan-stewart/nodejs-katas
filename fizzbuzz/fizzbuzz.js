@@ -2,7 +2,8 @@ module.exports = (input, option) => {
   var algorithms = {
     'basic': basic,
     'noConditional': noConditional,
-    'reduce': reduce
+    'reduce': reduce,
+    'mapReduce': mapReduce
   };
   var algorithm = algorithms[option] || basic
   return algorithm(input);
@@ -54,3 +55,29 @@ var reduce = input => {
     return (typeof prev == 'string') ? prev : current;
   }, null);
 };
+
+var mapReduce = input => {
+  var methods = [
+    x => { return { value: (x % 3 == 0) ? 'Fizz' : null, priority: 1}; },
+    x => { return { value: (x % 5 == 0) ? 'Buzz' : null, priority: 1}; },
+    x => { return { value: x, priority: 0 }; }
+  ];
+
+  var mapped = methods.map(current => {
+    return current(input);
+  });
+
+  var reduced = mapped.reduce((prev, current) => {
+    if (prev.value !== null) {
+      if (prev.priority > current.priority || current.value == null) {
+        return prev;
+      }
+      if (prev.priority == current.priority) {
+        current.value = `${prev.value}${current.value}`;
+      }
+    }
+    return current;
+  }, {value: null, priority: 0});
+
+  return reduced.value;
+}
