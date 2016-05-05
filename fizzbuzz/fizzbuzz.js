@@ -30,13 +30,13 @@ var noConditional = input => {
   var key = `${isMultipleOfThree}|${isMultipleOfFive}`;
 
   var methods = {
-    'true|true': () => { return 'FizzBuzz' },
-    'true|false': () => { return 'Fizz' },
-    'false|true': () => { return 'Buzz' },
-    'false|false': () => { return input }
+    'true|true': 'FizzBuzz',
+    'true|false': 'Fizz',
+    'false|true': 'Buzz',
+    'false|false': input
   };
 
-  return methods[key]();
+  return methods[key];
 };
 
 var reduce = input => {
